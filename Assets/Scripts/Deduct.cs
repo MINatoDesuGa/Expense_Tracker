@@ -7,7 +7,7 @@ using System;
 public class Deduct : MonoBehaviour
 {
     [SerializeField] private TMP_InputField deductValueInput;
-    [SerializeField] private GameObject Overlay, DeductPanel;
+    [SerializeField] private GameObject DeductPanel;
 
     public void OnConfirmClicked()
     {
@@ -23,7 +23,6 @@ public class Deduct : MonoBehaviour
 
         PlayerPrefs.SetInt(temp, currentValue);
 
-        Overlay.SetActive(false);
         DeductPanel.SetActive(false); 
     }
 }

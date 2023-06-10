@@ -8,7 +8,7 @@ public class EditItem : MonoBehaviour
     public static EditItem Instance;
 
     public TMP_InputField newItemName, newItemValue;
-    [SerializeField] private GameObject Overlay, EditPanel;
+    [SerializeField] private GameObject EditPanel;
 
     private void Awake()
     {
@@ -30,7 +30,6 @@ public class EditItem : MonoBehaviour
 
         PlayerPrefs.SetString(temp, newItemName.text);
 
-        Overlay.SetActive(false);
         EditPanel.SetActive(false); 
     }
 }

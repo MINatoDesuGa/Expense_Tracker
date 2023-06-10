@@ -11,7 +11,7 @@ public class ItemManager : MonoBehaviour
 
     public int id;
 
-    [SerializeField] private GameObject Overlay, EditPanel, DeductPanel;
+    [SerializeField] private GameObject EditPanel, DeductPanel;
 
     private void OnEnable()
     {
@@ -27,7 +27,6 @@ public class ItemManager : MonoBehaviour
 
     public void OnEditButtonPressed()
     {
-        Overlay.SetActive(true);
         EditPanel.SetActive(true);
 
         GlobalVariables.currentItemName = _itemName;
@@ -41,7 +40,6 @@ public class ItemManager : MonoBehaviour
 
     public void OnDeductButtonPressed()
     {
-        Overlay.SetActive(true);
         DeductPanel.SetActive(true);
 
         GlobalVariables.currentItemValue = _itemValue;
