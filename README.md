@@ -8,6 +8,6 @@
  &emsp;&emsp;&emsp;                 2. Item value (amount you want to limit from your salary)<br>
  &emsp;&emsp;&emsp;                 3. Edit button (To edit existing Item name & value)<br>
  &emsp;&emsp;&emsp;                 4. Deduct button (Everytime you spend, you use this to update your slot value)<br>
--> Follow up on confirming Edit & Deduct changes, it updates Savings value(in HUD) which is your current savings.<br><br>
+-> On confirming Edit & Deduct changes, it updates Savings value(in HUD) which is your current savings.<br><br>
 
 THANK YOU!
