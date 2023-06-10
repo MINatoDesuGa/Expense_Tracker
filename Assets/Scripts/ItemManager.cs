@@ -34,6 +34,9 @@ public class ItemManager : MonoBehaviour
         GlobalVariables.currentItemValue = _itemValue;
 
         GlobalVariables.currentID = id;
+
+        EditItem.Instance.newItemName.text = GlobalVariables.currentItemName.text;
+        EditItem.Instance.newItemValue.text = GlobalVariables.currentItemValue.text;
     }
 
     public void OnDeductButtonPressed()

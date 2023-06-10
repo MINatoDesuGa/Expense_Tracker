@@ -5,8 +5,15 @@ using TMPro;
 
 public class EditItem : MonoBehaviour
 {
-    [SerializeField] private TMP_InputField newItemName, newItemValue;
+    public static EditItem Instance;
+
+    public TMP_InputField newItemName, newItemValue;
     [SerializeField] private GameObject Overlay, EditPanel;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void OnConfirmClicked()
     {
