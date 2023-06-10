@@ -1,6 +1,6 @@
 # Expense_Tracker in Unity 2022.3.0f1
 
--> A bit complicated because i suck at designing flows <br>
+-> Basic Expense Tracking app <br>
 -> In HUD, 2 elements (Current savings, Reset Button (resets all slots values) )<br>
 -> Currently consists of 4 slots which you can customize how much money you want to put in for particular thing in your life<br>
 ->-> Each slot has 4 elements --<br>
