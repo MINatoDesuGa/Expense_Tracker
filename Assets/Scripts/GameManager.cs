@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public List<TMP_Text> ItemValues, ItemNames;
 
+    public GameObject CloseAppPanel;
+
     public TMP_Text Balance;
 
     [SerializeField] private Button ResetButton;
@@ -35,8 +37,22 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            if(!CloseAppPanel.activeSelf)
+            {
+                CloseAppPanel.SetActive(true);
+                StartCoroutine(PopUpCloseAppPanel());
+            } else
+            {
+                Application.Quit();
+            }
+            
         }
+    }
+
+    private IEnumerator PopUpCloseAppPanel()
+    {
+        yield return new WaitForSeconds(2);
+        CloseAppPanel.SetActive(false);
     }
     private void Init()
     {
