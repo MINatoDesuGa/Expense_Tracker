@@ -6,23 +6,25 @@ using TMPro;
 
 public class ItemManager : MonoBehaviour
 {
-    [SerializeField] private Button EditButton, DeductButton;
+    [SerializeField] private Button EditButton, DeductButton, AddButton;
     [SerializeField] private TextMeshProUGUI _itemName, _itemValue;
 
     public int id;
 
-    [SerializeField] private GameObject EditPanel, DeductPanel;
+    [SerializeField] private GameObject EditPanel, AddDeductPanel;
 
     private void OnEnable()
     {
         EditButton.onClick.AddListener(OnEditButtonPressed);
         DeductButton.onClick.AddListener(OnDeductButtonPressed);
+        AddButton.onClick.AddListener(OnAddButtonPressed);
     }
 
     private void OnDisable()
     {
         EditButton.onClick.RemoveListener(OnEditButtonPressed);
         DeductButton.onClick.RemoveListener(OnDeductButtonPressed);
+        AddButton.onClick.RemoveListener(OnAddButtonPressed);
     }
 
     public void OnEditButtonPressed()
@@ -40,7 +42,19 @@ public class ItemManager : MonoBehaviour
 
     public void OnDeductButtonPressed()
     {
-        DeductPanel.SetActive(true);
+        GlobalVariables.isAddAction = false;
+        OnAddDeductPress();
+    }
+
+    public void OnAddButtonPressed()
+    {
+        GlobalVariables.isAddAction = true;
+        OnAddDeductPress();
+    }
+
+    private void OnAddDeductPress()
+    {
+        AddDeductPanel.SetActive(true);
 
         GlobalVariables.currentItemValue = _itemValue;
 

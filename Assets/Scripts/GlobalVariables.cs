@@ -9,4 +9,6 @@ public class GlobalVariables : MonoBehaviour
     public static TextMeshProUGUI currentItemName, currentItemValue;
 
     public static int currentID;
+
+    public static bool isAddAction = false;
 }

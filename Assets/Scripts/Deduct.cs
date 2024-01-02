@@ -13,7 +13,12 @@ public class Deduct : MonoBehaviour
     {
         int currentValue = int.Parse( GlobalVariables.currentItemValue.text);
 
-        currentValue -= int.Parse(deductValueInput.text);
+        if (GlobalVariables.isAddAction) {
+            currentValue += int.Parse(deductValueInput.text);
+        } else
+        {
+            currentValue -= int.Parse(deductValueInput.text);
+        }
 
         GlobalVariables.currentItemValue.text = currentValue.ToString();
 
